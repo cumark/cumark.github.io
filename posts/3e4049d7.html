@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo之渲染绕过, 李牛牛 计算机 软件 leetcode">
+    <meta name="keywords" content="Leetcode 326. Power of Three 3的幂, 李牛牛 计算机 软件 leetcode">
     <meta name="description" content="硕士研究生 | 计算机技术 | 软件开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo之渲染绕过 | Mark</title>
+    <title>Leetcode 326. Power of Three 3的幂 | Mark</title>
 
     <link rel="icon" type="image/jpeg" href="https://z3.ax1x.com/2021/09/22/4UQnjP.jpg">
 
@@ -510,12 +510,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928015500.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928015537.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo之渲染绕过</h1>
+                    <h1 class="description center-align post-title">Leetcode 326. Power of Three 3的幂</h1>
                 </div>
             </div>
         </div>
@@ -636,12 +636,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
                             </a>
                         
-                            <a href="/tags/%E6%B8%B2%E6%9F%93%E7%BB%95%E8%BF%87/">
-                                <span class="chip bg-color">渲染绕过</span>
+                            <a href="/tags/algorithm/">
+                                <span class="chip bg-color">algorithm</span>
                             </a>
                         
                     </div>
@@ -652,8 +652,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
-                                博客篇
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -665,21 +665,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-28
+                    2021-09-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-22
+                    2021-09-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    463
+                    272
                 </div>
                 
 
@@ -704,46 +704,51 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="0x001-Hexo-渲染"><a href="#0x001-Hexo-渲染" class="headerlink" title="0x001 Hexo 渲染"></a>0x001 Hexo 渲染</h3><p>  在Hexo部署时会默认渲染source下的所有html页面，但有时候想在Hexo博客上单独自定义html页面或README.md时，却不希望被Hexo渲染。因此对某个文件或者目录进行排除渲染是非常必要的。</p>
-<h3 id="0x002-方法一：font-matter"><a href="#0x002-方法一：font-matter" class="headerlink" title="0x002 方法一：font matter"></a>0x002 方法一：font matter</h3><p><code>Hexo</code>新建网站页面，然后将你的代码直接写入 <code>index.md</code> 中</p>
-<p>在 <code>Front matter</code> 中添加 <code>layout: false</code>，此方法适用于单一的纯<code>HTML</code><br><code>CSS</code> 页面。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---
-title: tools
-date: <span class="token number">2020</span>-04-28 00:00:00
-type: <span class="token string">"tools"</span>
-layout: <span class="token boolean">false</span>
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of three. Otherwise, return <code>false</code></em>.</p>
+<p>An integer <code>n</code> is a power of three, if there exists an integer <code>x</code> such that <code>n == 3x</code>.</p>
+<p><strong>Example 1:</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">Input: n = 27
+Output: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="0x003-方法二：skip-render"><a href="#0x003-方法二：skip-render" class="headerlink" title="0x003 方法二：skip render"></a>0x003 方法二：skip render</h3><p>在博客根目录下的 <code>_config.yml</code>，找到 <code>skip_render</code>，大概在32行左右，写入你想要的跳过渲染的路径，注意缩进和空格。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 指定目录跳过hexo渲染</span>
-skip_render:
-  - <span class="token string">'tools/*'</span>
-  - <span class="token string">'tools/**'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>Example 2:</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">Input: n = 0
+Output: false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<blockquote>
-<p>注释：<code>tools/*</code> 表示在目录 <code>source/fireworks</code> 下的文件全部跳过渲染，<code>tools/**</code> 表示在博客根目录 <code>source/tools/</code> 文件夹下的文件全部跳过渲染（例如页面的 js、css 在另一个文件夹中）。</p>
-</blockquote>
-<h3 id="0x004-案例：webstack-导航"><a href="#0x004-案例：webstack-导航" class="headerlink" title="0x004 案例：webstack 导航"></a>0x004 案例：webstack 导航</h3><p><code>webstack</code>是一个纯静态的网址导航网站，内容均由<code>viggo</code>收集并整理。项目基于<code>bootstrap</code>前端框架开发。</p>
-<p><img src="https://camo.githubusercontent.com/41111c4c1d9922982f380566e6a2f8415204c52c/687474703a2f2f7777772e776562737461636b2e63632f6173736574732f696d616765732f707265766965772e676966" alt="image"></p>
+<p><strong>Example 3:</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">Input: n = 9
+Output: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>Example 4:</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">Input: n = 45
+Output: false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>Constraints:</strong></p>
 <ul>
-<li>Github：<a target="_blank" rel="noopener" href="https://github.com/WebStackPage/WebStackPage.github.io">https://github.com/WebStackPage/WebStackPage.github.io</a></li>
+<li><code>-2^31 &lt;= n &lt;= 2^31 - 1</code></li>
 </ul>
-<p>在博客根目录 <code>source/</code>下新建<code>tools</code>，然后新建<code>index.html</code>,将<code>webstack</code>网页源码全选复制粘贴到里面。</p>
-<ul>
-<li>本站的webstack源码：<a href="view-source:http://luckyzmj.cn/tools/">view-source:http://luckyzmj.cn/tools/</a></li>
-</ul>
-<blockquote>
-<p>注意：将源码里的部分信息以及跳转链接按照你真实个人博客的环境进行修改。</p>
-</blockquote>
-<p>然后打开博客根目录下配置文件<code>_config.yml</code>，找到<code>skip_render</code>，做如下修改：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">skip_render:
-  - <span class="token string">'tools/*'</span>
-  - <span class="token string">'tools/**'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="分析：这道题要判断n是否是3的幂"><a href="#分析：这道题要判断n是否是3的幂" class="headerlink" title="分析：这道题要判断n是否是3的幂"></a>分析：这道题要判断n是否是3的幂</h3><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>最容易想到的思路是，用n不断除3，如果能除到1且无余数则为3的幂，否则不是。整个过程的时间复杂度为log(n)，时间复杂度为log(1)</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPowerOfThree</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">!=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>n<span class="token operator">%</span><span class="token number">3</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            n<span class="token operator">/=</span><span class="token number">3</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>最后执行<code>hexo clean</code>和<code>hexo s -g </code>本地预览，检查无误后<code>hexo g -d</code>部署到服务器上即可。</p>
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://xiabor.com/2020/04/21/hexo3/#%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87hexo%E7%9A%84%E6%B8%B2%E6%9F%93">https://xiabor.com/2020/04/21/hexo3/#%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87hexo%E7%9A%84%E6%B8%B2%E6%9F%93</a></li>
-</ul>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在int可表示的范围内，3的最大幂为3的19次幂，这个数字仅是3的幂数的公倍数，所以可以从n是否3的19次幂的约数来判断。这个过程仅做了常数级运算，时间复杂度为log(1)，空间复杂度为log(1)</p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-none"><code class="language-none">class Solution {
+    public boolean isPowerOfThree(int n) {
+        int max=(int)Math.pow(3,19);
+        if(n&gt;0&amp;&amp;max%n==0) {
+            return true;
+        }
+        return false;
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -760,7 +765,7 @@ skip_render:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Luckey</a>
+                    <a href="/about" rel="external nofollow noreferrer">Mark</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -770,7 +775,7 @@ skip_render:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.liniuniu.top/posts/17fd92ae.html">http://www.liniuniu.top/posts/17fd92ae.html</a>
+                    <a href="http://www.liniuniu.top/posts/3e4049d7.html">http://www.liniuniu.top/posts/3e4049d7.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -783,7 +788,7 @@ skip_render:
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Luckey</a>
+                    <a href="/about" target="_blank">Mark</a>
                     !
                 </span>
             </div>
@@ -808,12 +813,12 @@ skip_render:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
                                 </a>
                             
-                                <a href="/tags/%E6%B8%B2%E6%9F%93%E7%BB%95%E8%BF%87/">
-                                    <span class="chip bg-color">渲染绕过</span>
+                                <a href="/tags/algorithm/">
+                                    <span class="chip bg-color">algorithm</span>
                                 </a>
                             
                         </div>
@@ -1289,31 +1294,31 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/d74d8b76.html">
+                <a href="/posts/c4b7fa82.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928013834.jpg" class="responsive-img" alt="LuckyBlog开源搭建教程">
+                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928015238.jpg" class="responsive-img" alt="Leetcode 650. 2 Keys Keyboard 只有两个键的键盘">
                         
-                        <span class="card-title">LuckyBlog开源搭建教程</span>
+                        <span class="card-title">Leetcode 650. 2 Keys Keyboard 只有两个键的键盘</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            之前在B站上发布了个人博客的视频，播放量也破千了，有网友私聊也想要搭建一个这样的博客。经过一段时间的准备，现将博客LuckyBlog的源代码公布出来，大家只需要根据以下的步骤，即可快速搭建一个漂亮且完善的博客。
+                            看到字符串优先用动态规划方法，确定动态规划公式dp[i]=dp[j]+i/j，确定最终结果
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" class="post-category">
-                                    博客篇
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1323,12 +1328,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo-blog-lucky/">
-                        <span class="chip bg-color">hexo-blog-lucky</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">博客搭建教程</span>
+                    <a href="/tags/algorithm/">
+                        <span class="chip bg-color">algorithm</span>
                     </a>
                     
                 </div>
@@ -1342,31 +1347,31 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/4b3510a4.html">
+                <a href="/posts/b75f9389.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020120.jpg" class="responsive-img" alt="文字背景粒子特效">
+                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928021038.jpg" class="responsive-img" alt="Leetcode 725. Split Linked List in Parts 分隔链表">
                         
-                        <span class="card-title">文字背景粒子特效</span>
+                        <span class="card-title">Leetcode 725. Split Linked List in Parts 分隔链表</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一款jQuery+CSS3的文字背景粒子动画特效，一共6种粒子效果，每种文字背景的粒子效果都不同，有漂浮的有坠落的等等。 
+                            使用两个for循环，把被分割的每一段链表的开端设为上一段的next，流畅实现链表分隔
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E7%AF%87/" class="post-category">
-                                    前端篇
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1376,12 +1381,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jQuery-CSS3/">
-                        <span class="chip bg-color">jQuery+CSS3</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88/">
-                        <span class="chip bg-color">粒子特效</span>
+                    <a href="/tags/algorithm/">
+                        <span class="chip bg-color">algorithm</span>
                     </a>
                     
                 </div>
@@ -1621,7 +1626,7 @@ new Valine({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.7k</span>&nbsp;字
+                class="white-color">1.9k</span>&nbsp;字
             
             
             

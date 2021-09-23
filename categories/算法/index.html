@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: 前端篇, 李牛牛 计算机 软件 leetcode">
+    <meta name="keywords" content="分类: 算法, 李牛牛 计算机 软件 leetcode">
     <meta name="description" content="硕士研究生 | 计算机技术 | 软件开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: 前端篇 | Mark</title>
+    <title>分类: 算法 | Mark</title>
 
     <link rel="icon" type="image/jpeg" href="https://z3.ax1x.com/2021/09/22/4UQnjP.jpg">
 
@@ -549,32 +549,15 @@
                 
                 
                 
-                <a href="/categories/%E5%8D%9A%E5%AE%A2%E7%AF%87/" title="博客篇: 5">
-                  <div class="moleskine-wrapper">
-                      <div class="moleskine-notebook">
-                          <div class="chip notebook-cover center-align waves-effect waves-light
-                           chip-default "
-                                  style="background-color: #0A47F7;">                                               
-                              <div class="notebook-skin
-                                   chip-default "
-                                  >博客篇                                  
-                              </div>
-                          </div>
-                          <div class="notebook-page dotted"></div>
-                      </div>
-                  </div>
-                </a>
-                
-                
-                <a href="/categories/%E5%89%8D%E7%AB%AF%E7%AF%87/" title="前端篇: 1">
+                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 5">
                   <div class="moleskine-wrapper">
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-active "
-                                  style="background-color: #B5B201;">                                               
+                                  style="background-color: #65A7BE;">                                               
                               <div class="notebook-skin
                                    chip-active "
-                                  >前端篇                                  
+                                  >算法                                  
                               </div>
                           </div>
                           <div class="notebook-page dotted"></div>
@@ -705,31 +688,31 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/4b3510a4.html">
+                    <a href="/posts/776c8164.html">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020120.jpg" class="responsive-img" alt="文字背景粒子特效">
+                            <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928012539.jpg" class="responsive-img" alt="Leetcode 58. Length of Last Word 最后一个单词的长度">
                             
-                            <span class="card-title">文字背景粒子特效</span>
+                            <span class="card-title">Leetcode 58. Length of Last Word 最后一个单词的长度</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                一款jQuery+CSS3的文字背景粒子动画特效，一共6种粒子效果，每种文字背景的粒子效果都不同，有漂浮的有坠落的等等。 
+                                这道题求一个句子之中最后一个单词的长度，最简单的方法就是判断是不是为空格，是空格就把sum置0，否则累加，最终得到的就是最后一个单词的长度
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E5%89%8D%E7%AB%AF%E7%AF%87/" class="post-category">
-                                    前端篇
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                                 
                                 
@@ -740,12 +723,212 @@
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/jQuery-CSS3/">
-                            <span class="chip bg-color">jQuery+CSS3</span>
+                        <a href="/tags/leetcode/">
+                            <span class="chip bg-color">leetcode</span>
                         </a>
                         
-                        <a href="/tags/%E7%B2%92%E5%AD%90%E7%89%B9%E6%95%88/">
-                            <span class="chip bg-color">粒子特效</span>
+                        <a href="/tags/algorithm/">
+                            <span class="chip bg-color">algorithm</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/e88ed89b.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928014621.jpg" class="responsive-img" alt="Leetcode 673. Number of Longest Increasing Subsequence 最长递增子序列的个数">
+                            
+                            <span class="card-title">Leetcode 673. Number of Longest Increasing Subsequence 最长递增子序列的个数</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                使用动态规划方法，限定词为最长，可以设置为一个dp数组，递增放到循环里进行判断，故设置len[i]表示结尾为nums[i]的最长子序列的长度，cnt[i]表示结尾为nums[i]的最长子序列的数量。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/leetcode/">
+                            <span class="chip bg-color">leetcode</span>
+                        </a>
+                        
+                        <a href="/tags/algorithm/">
+                            <span class="chip bg-color">algorithm</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/c4b7fa82.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928015238.jpg" class="responsive-img" alt="Leetcode 650. 2 Keys Keyboard 只有两个键的键盘">
+                            
+                            <span class="card-title">Leetcode 650. 2 Keys Keyboard 只有两个键的键盘</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                看到字符串优先用动态规划方法，确定动态规划公式dp[i]=dp[j]+i/j，确定最终结果
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/leetcode/">
+                            <span class="chip bg-color">leetcode</span>
+                        </a>
+                        
+                        <a href="/tags/algorithm/">
+                            <span class="chip bg-color">algorithm</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/3e4049d7.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928015537.jpg" class="responsive-img" alt="Leetcode 326. Power of Three 3的幂">
+                            
+                            <span class="card-title">Leetcode 326. Power of Three 3的幂</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                使用数学约数方法解决3的幂问题
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/leetcode/">
+                            <span class="chip bg-color">leetcode</span>
+                        </a>
+                        
+                        <a href="/tags/algorithm/">
+                            <span class="chip bg-color">algorithm</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/b75f9389.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928021038.jpg" class="responsive-img" alt="Leetcode 725. Split Linked List in Parts 分隔链表">
+                            
+                            <span class="card-title">Leetcode 725. Split Linked List in Parts 分隔链表</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                使用两个for循环，把被分割的每一段链表的开端设为上一段的next，流畅实现链表分隔
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/leetcode/">
+                            <span class="chip bg-color">leetcode</span>
+                        </a>
+                        
+                        <a href="/tags/algorithm/">
+                            <span class="chip bg-color">algorithm</span>
                         </a>
                         
                     </div>
@@ -829,7 +1012,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">16.7k</span>&nbsp;字
+                class="white-color">1.9k</span>&nbsp;字
             
             
             
