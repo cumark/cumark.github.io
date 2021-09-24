@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Leetcode 326. Power of Three 3的幂, 李牛牛 计算机 软件 leetcode">
+    <meta name="keywords" content="Leetcode 430. Flatten a Multilevel Doubly Linked List 扁平化多级双向链表, 李牛牛 计算机 软件 leetcode">
     <meta name="description" content="硕士研究生 | 计算机技术 | 软件开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Leetcode 326. Power of Three 3的幂 | Mark</title>
+    <title>Leetcode 430. Flatten a Multilevel Doubly Linked List 扁平化多级双向链表 | Mark</title>
 
     <link rel="icon" type="image/jpeg" href="https://z3.ax1x.com/2021/09/22/4UQnjP.jpg">
 
@@ -510,12 +510,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928015537.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020832.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Leetcode 326. Power of Three 3的幂</h1>
+                    <h1 class="description center-align post-title">Leetcode 430. Flatten a Multilevel Doubly Linked List 扁平化多级双向链表</h1>
                 </div>
             </div>
         </div>
@@ -644,6 +644,10 @@
                                 <span class="chip bg-color">algorithm</span>
                             </a>
                         
+                            <a href="/tags/dfs/">
+                                <span class="chip bg-color">dfs</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -665,28 +669,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-22
+                    2021-09-24
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-23
+                    2021-09-24
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    272
+                    593
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -704,50 +708,103 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of three. Otherwise, return <code>false</code></em>.</p>
-<p>An integer <code>n</code> is a power of three, if there exists an integer <code>x</code> such that <code>n == 3x</code>.</p>
+                <p>You are given a doubly linked list which in addition to the next and previous pointers, it could have a child pointer, which may or may not point to a separate doubly linked list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in the example below.</p>
+<p>Flatten the list so that all the nodes appear in a single-level, doubly linked list. You are given the head of the first level of the list.</p>
 <p><strong>Example 1:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">Input: n = 27
-Output: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">Input: head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
+Output: [1,2,3,7,8,11,12,9,10,4,5,6]
+Explanation
+The multilevel linked list in the input is as follows:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p><img src="https://raw.githubusercontent.com/cumark/picBed/master/multilevellinkedlist.png"></p>
+<p>After flattening the multilevel linked list it becomes:</p>
+<p><img src="https://raw.githubusercontent.com/cumark/picBed/master/multilevellinkedlistflattened.png"></p>
 <p><strong>Example 2:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">Input: n = 0
-Output: false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">Input: head = [1,2,null,3]
+Output: [1,3,2]
+Explanation:
+
+The input multilevel linked list is as follows:
+
+  1---2---NULL
+  |
+  3---NULL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>Example 3:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">Input: n = 9
-Output: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">Input: head = []
+Output: []<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><strong>Example 4:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">Input: n = 45
-Output: false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+<p><strong>How multilevel linked list is represented in test case:</strong></p>
+<p>We use the multilevel linked list from <strong>Example 1</strong> above:</p>
+<pre class="line-numbers language-none"><code class="language-none">1---2---3---4---5---6--NULL
+        |
+        7---8---9---10--NULL
+            |
+            11--12--NULL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The serialization of each level is as follows:</p>
+<pre class="line-numbers language-none"><code class="language-none">[1,2,3,4,5,6,null]
+[7,8,9,10,null]
+[11,12,null]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>To serialize all levels together we will add nulls in each level to signify no node connects to the upper node of the previous level. The serialization becomes:</p>
+<pre class="line-numbers language-none"><code class="language-none">[1,2,3,4,5,6,null]
+[null,null,7,8,9,10,null]
+[null,11,12,null]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>Merging the serialization of each level and removing trailing nulls we obtain:</p>
+<pre class="line-numbers language-none"><code class="language-none">[1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <p><strong>Constraints:</strong></p>
 <ul>
-<li><code>-2^31 &lt;= n &lt;= 2^31 - 1</code></li>
+<li>The number of Nodes will not exceed <code>1000</code>.</li>
+<li><code>1 &lt;= Node.val &lt;= 10^5</code></li>
 </ul>
-<h3 id="分析：这道题要判断n是否是3的幂"><a href="#分析：这道题要判断n是否是3的幂" class="headerlink" title="分析：这道题要判断n是否是3的幂"></a>分析：这道题要判断n是否是3的幂</h3><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>最容易想到的思路是，用n不断除3，如果能除到1且无余数则为3的幂，否则不是。整个过程的时间复杂度为log(n)，时间复杂度为log(1)</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isPowerOfThree</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">!=</span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>n<span class="token operator">%</span><span class="token number">3</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            n<span class="token operator">/=</span><span class="token number">3</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> n<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>分析：这道题给出一个多级双向链表，要求将其扁平化，也就是将多级转变为单极，这种形式与二叉树链表的先序遍历非常相似，因此优先考虑深度优先搜索遍历</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>从head开始遍历链表，当遇到存在child节点时，则保存node.next，然后dfs node.child（与二叉树先序优先搜索遍历相似），将node.next与node.child构建先后续关系，node.child置于null。dfs最终得到child节点的尾节点，将尾节点和之前保存的node.next构建先后续关系，dfs深层遍历后回溯到之前的层，把每一层child节点的前后构建完成。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">*</span>
+<span class="token comment">// Definition for a Node.</span>
+<span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> val<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span> prev<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span> next<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span> child<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">*</span><span class="token operator">/</span>
 
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>在int可表示的范围内，3的最大幂为3的19次幂，这个数字仅是3的幂数的公倍数，所以可以从n是否3的19次幂的约数来判断。这个过程仅做了常数级运算，时间复杂度为log(1)，空间复杂度为log(1)</p>
-<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-none"><code class="language-none">class Solution {
-    public boolean isPowerOfThree(int n) {
-        int max=(int)Math.pow(3,19);
-        if(n&gt;0&amp;&amp;max%n==0) {
-            return true;
-        }
-        return false;
-    }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span> <span class="token function">flatten</span><span class="token punctuation">(</span><span class="token class-name">Node</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">dfs</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token class-name">Node</span> node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Node</span> cur<span class="token operator">=</span>node<span class="token punctuation">;</span>
+        <span class="token class-name">Node</span> last<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cur<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">Node</span> next<span class="token operator">=</span>cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>cur<span class="token punctuation">.</span>child<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token class-name">Node</span> childLast<span class="token operator">=</span><span class="token function">dfs</span><span class="token punctuation">(</span>cur<span class="token punctuation">.</span>child<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                next<span class="token operator">=</span>cur<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+                cur<span class="token punctuation">.</span>next<span class="token operator">=</span>cur<span class="token punctuation">.</span>child<span class="token punctuation">;</span>
+                cur<span class="token punctuation">.</span>child<span class="token punctuation">.</span>prev<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>next<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    childLast<span class="token punctuation">.</span>next<span class="token operator">=</span>next<span class="token punctuation">;</span>
+                    next<span class="token punctuation">.</span>prev<span class="token operator">=</span>childLast<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                cur<span class="token punctuation">.</span>child<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">;</span>
+                last<span class="token operator">=</span>childLast<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                last<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            cur<span class="token operator">=</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> last<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -775,7 +832,7 @@ Output: false<span aria-hidden="true" class="line-numbers-rows"><span></span><sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.liniuniu.top/posts/3e4049d7.html">http://www.liniuniu.top/posts/3e4049d7.html</a>
+                    <a href="http://www.liniuniu.top/posts/345fb18b.html">http://www.liniuniu.top/posts/345fb18b.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -819,6 +876,10 @@ Output: false<span aria-hidden="true" class="line-numbers-rows"><span></span><sp
                             
                                 <a href="/tags/algorithm/">
                                     <span class="chip bg-color">algorithm</span>
+                                </a>
+                            
+                                <a href="/tags/dfs/">
+                                    <span class="chip bg-color">dfs</span>
                                 </a>
                             
                         </div>
@@ -1294,31 +1355,31 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/c4b7fa82.html">
+                <a href="/posts/547feeee.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928015238.jpg" class="responsive-img" alt="Leetcode 650. 2 Keys Keyboard 只有两个键的键盘">
+                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928021245.jpg" class="responsive-img" alt="Git的使用心得">
                         
-                        <span class="card-title">Leetcode 650. 2 Keys Keyboard 只有两个键的键盘</span>
+                        <span class="card-title">Git的使用心得</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            看到字符串优先用动态规划方法，确定动态规划公式dp[i]=dp[j]+i/j，确定最终结果
+                            讲述了Git的安装，配置，工作流程，和文件各个状态之间的转变，以及在Intellij idea和Vscode软件下的运用
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-24
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    软件技术
                                 </a>
                             
                             
@@ -1328,12 +1389,12 @@ new Valine({
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
-                    <a href="/tags/algorithm/">
-                        <span class="chip bg-color">algorithm</span>
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1/">
+                        <span class="chip bg-color">代码托管</span>
                     </a>
                     
                 </div>
@@ -1347,24 +1408,24 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/b75f9389.html">
+                <a href="/posts/776c8164.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928021038.jpg" class="responsive-img" alt="Leetcode 725. Split Linked List in Parts 分隔链表">
+                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928012539.jpg" class="responsive-img" alt="Leetcode 58. Length of Last Word 最后一个单词的长度">
                         
-                        <span class="card-title">Leetcode 725. Split Linked List in Parts 分隔链表</span>
+                        <span class="card-title">Leetcode 58. Length of Last Word 最后一个单词的长度</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用两个for循环，把被分割的每一段链表的开端设为上一段的next，流畅实现链表分隔
+                            这道题求一个句子之中最后一个单词的长度，最简单的方法就是判断是不是为空格，是空格就把sum置0，否则累加，最终得到的就是最后一个单词的长度
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-23
                             </span>
                         <span class="publish-author">
                             
