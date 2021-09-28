@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Leetcode 371. Sum of Two Integers 两整数之和, 李牛牛 计算机 软件 leetcode">
+    <meta name="keywords" content="Leetcode 208. Implement Trie (Prefix Tree) 实现Trie（前缀树）, 李牛牛 计算机 软件 leetcode">
     <meta name="description" content="硕士研究生 | 计算机技术 | 软件开发">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Leetcode 371. Sum of Two Integers 两整数之和 | Mark</title>
+    <title>Leetcode 208. Implement Trie (Prefix Tree) 实现Trie（前缀树） | Mark</title>
 
     <link rel="icon" type="image/jpeg" href="https://z3.ax1x.com/2021/09/22/4UQnjP.jpg">
 
@@ -510,12 +510,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928021815.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020120.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Leetcode 371. Sum of Two Integers 两整数之和</h1>
+                    <h1 class="description center-align post-title">Leetcode 208. Implement Trie (Prefix Tree) 实现Trie（前缀树）</h1>
                 </div>
             </div>
         </div>
@@ -644,10 +644,6 @@
                                 <span class="chip bg-color">algorithm</span>
                             </a>
                         
-                            <a href="/tags/bit/">
-                                <span class="chip bg-color">bit</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -669,28 +665,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-25
+                    2021-09-28
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-09-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    181
+                    537
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -708,34 +704,107 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Given two integers <code>a</code> and <code>b</code>, return <em>the sum of the two integers without using the operators</em> <code>+</code> <em>and</em> <code>-</code>.</p>
+                <p>A <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Trie"><strong>trie</strong></a> (pronounced as “try”) or <strong>prefix tree</strong> is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.</p>
+<p>Implement the Trie class:</p>
+<ul>
+<li><code>Trie()</code> Initializes the trie object.</li>
+<li><code>void insert(String word)</code> Inserts the string <code>word</code> into the trie.</li>
+<li><code>boolean search(String word)</code> Returns <code>true</code> if the string <code>word</code> is in the trie (i.e., was inserted before), and <code>false</code> otherwise.</li>
+<li><code>boolean startsWith(String prefix)</code> Returns <code>true</code> if there is a previously inserted string <code>word</code> that has the prefix <code>prefix</code>, and <code>false</code> otherwise.</li>
+</ul>
 <p><strong>Example 1:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">Input: a = 1, b = 2
-Output: 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">Input
+["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+[[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+Output
+[null, null, true, false, true, null, true]
 
-<p><strong>Example 2:</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">Input: a = 2, b = 3
-Output: 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+Explanation
+Trie trie = new Trie();
+trie.insert("apple");
+trie.search("apple");   // return True
+trie.search("app");     // return False
+trie.startsWith("app"); // return True
+trie.insert("app");
+trie.search("app");     // return True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p><strong>Constraints:</strong></p>
 <ul>
-<li><code>-1000 &lt;= a, b &lt;= 1000</code></li>
+<li><code>1 &lt;= word.length, prefix.length &lt;= 2000</code></li>
+<li><code>word</code> and <code>prefix</code> consist only of lowercase English letters.</li>
+<li>At most <code>3 * 104</code> calls <strong>in total</strong> will be made to <code>insert</code>, <code>search</code>, and <code>startsWith</code>.</li>
 </ul>
-<p>分析：</p>
-<p>题目的要求非常简单，在不使用+-号及其相关符号的原则下，实现两个整数相加，优先考虑位运算，可以把需要进位和不需要进位的部分迭代运算。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>根据以上分析，对于需要进位的部分，用(a&amp;b)&lt;&lt;1实现，对于不需要进位，则用a^b的实现，不断迭代，代码如下：</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">while</span><span class="token punctuation">(</span>a<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">int</span> index<span class="token operator">=</span><span class="token punctuation">(</span>a<span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span><span class="token number">1</span><span class="token punctuation">;</span>
-            b<span class="token operator">=</span>a<span class="token operator">^</span>b<span class="token punctuation">;</span>
-            a<span class="token operator">=</span>index<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> b<span class="token punctuation">;</span>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>这道题要求设计一个Trie数的类，首先需定义一个节点，TrieNode节点应该包括如下部分：</p>
+<p>1.包含TrieNode节点值</p>
+<p>2.包含是否完整词汇的判断</p>
+<p>3.包含TrieNode节点的子节点，其中应该包括26个英文字母</p>
+<p>4.包含创建TrieNode的方法，具体有TrieNode()空函数值，及赋node节点值的方法</p>
+<p>设计TrieNode节点后，可以设置一个root空节点，当insert时，则插入于root空节点之后</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>设计TrieNode节点，当insert时，则插入字典树所不存在的字符，并在插入完之后，将isWord置为true。</p>
+<p>当search时，从root节点，遍历字典树。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">TrieNode</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">char</span> val<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> isWord<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">TrieNode</span><span class="token punctuation">[</span><span class="token punctuation">]</span> children<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">TrieNode</span><span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">TrieNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token class-name">TrieNode</span><span class="token punctuation">(</span><span class="token keyword">char</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">TrieNode</span> node<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">TrieNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        node<span class="token punctuation">.</span>val<span class="token operator">=</span>c<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Trie</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">TrieNode</span> root<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        root<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">TrieNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        root<span class="token punctuation">.</span>val<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token class-name">String</span> word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">TrieNode</span> node<span class="token operator">=</span>root<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>word<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">char</span> ch<span class="token operator">=</span>word<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>ch<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>ch<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">TrieNode</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            node<span class="token operator">=</span>node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>ch<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        node<span class="token punctuation">.</span>isWord<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token class-name">String</span> word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">TrieNode</span> node<span class="token operator">=</span>root<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">char</span> ch<span class="token operator">:</span>word<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>ch<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                node<span class="token operator">=</span>node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>ch<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> node<span class="token punctuation">.</span>isWord<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token class-name">String</span> prefix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">TrieNode</span> node<span class="token operator">=</span>root<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">char</span> ch<span class="token operator">:</span>prefix<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>ch<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                node<span class="token operator">=</span>node<span class="token punctuation">.</span>children<span class="token punctuation">[</span>ch<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie obj = new Trie();
+ * obj.insert(word);
+ * boolean param_2 = obj.search(word);
+ * boolean param_3 = obj.startsWith(prefix);
+ */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -763,7 +832,7 @@ Output: 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.liniuniu.top/posts/22becddc.html">http://www.liniuniu.top/posts/22becddc.html</a>
+                    <a href="http://www.liniuniu.top/posts/756a1399.html">http://www.liniuniu.top/posts/756a1399.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -807,10 +876,6 @@ Output: 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
                             
                                 <a href="/tags/algorithm/">
                                     <span class="chip bg-color">algorithm</span>
-                                </a>
-                            
-                                <a href="/tags/bit/">
-                                    <span class="chip bg-color">bit</span>
                                 </a>
                             
                         </div>
@@ -1286,24 +1351,24 @@ new Valine({
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/973b595.html">
+                <a href="/posts/372ac7d5.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020502.jpg" class="responsive-img" alt="Leetcode 115. Distinct Subsequences 两个字符串的删除操作">
+                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020152.jpg" class="responsive-img" alt="Leetcode 130. Surrounded Regions 被围绕的区域">
                         
-                        <span class="card-title">Leetcode 115. Distinct Subsequences 两个字符串的删除操作</span>
+                        <span class="card-title">Leetcode 130. Surrounded Regions 被围绕的区域</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            采用动态规划方程方法解题，动态规划方程为：`dp[i][j]=dp[i-1][j-1]+dp[i-1][j](s.charAt(i)==t.charAt[j]),dp[i][j]=dp[i-1][j](s.charAt(i)!=t.charAt(j))`
+                            仅dfs遍历矩阵的边缘，对于O，则进行dfs遍历，并将之置为M。最后再将所有M置为O，O置为X即可。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-28
                         </span>
                         <span class="publish-author">
                             
@@ -1328,8 +1393,8 @@ new Valine({
                         <span class="chip bg-color">algorithm</span>
                     </a>
                     
-                    <a href="/tags/dp/">
-                        <span class="chip bg-color">dp</span>
+                    <a href="/tags/dfs/">
+                        <span class="chip bg-color">dfs</span>
                     </a>
                     
                 </div>
@@ -1343,24 +1408,24 @@ new Valine({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/345fb18b.html">
+                <a href="/posts/af957438.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020832.jpg" class="responsive-img" alt="Leetcode 430. Flatten a Multilevel Doubly Linked List 扁平化多级双向链表">
+                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020152.jpg" class="responsive-img" alt="Leetcode 410. Split Array Largest Sum 分割数组的最大值">
                         
-                        <span class="card-title">Leetcode 430. Flatten a Multilevel Doubly Linked List 扁平化多级双向链表</span>
+                        <span class="card-title">Leetcode 410. Split Array Largest Sum 分割数组的最大值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            求找到使得word1和word2相同所需的最小步数，每步可以删除一个字符。字符串相关的问题，首先考虑动态规划，当遍历word1和word2时，有两种可能性情况
+                            应对数组问题，可以考虑二分搜索，首先要确定上下界。由于各自和的最大值会在max（nums[i]）和sum之间，可以以max为左边界，sum为右边界，利用二分搜索不断接近并得到答案。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-28
                             </span>
                         <span class="publish-author">
                             
@@ -1385,8 +1450,8 @@ new Valine({
                         <span class="chip bg-color">algorithm</span>
                     </a>
                     
-                    <a href="/tags/dp/">
-                        <span class="chip bg-color">dp</span>
+                    <a href="/tags/binarySearch/">
+                        <span class="chip bg-color">binarySearch</span>
                     </a>
                     
                 </div>

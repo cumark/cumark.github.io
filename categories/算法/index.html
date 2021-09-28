@@ -554,7 +554,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #D6BDE4;">                                               
+                                  style="background-color: #80A35E;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >软件技术                                  
@@ -566,12 +566,12 @@
                 </a>
                 
                 
-                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 22">
+                <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 23">
                   <div class="moleskine-wrapper">
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-active "
-                                  style="background-color: #406DE1;">                                               
+                                  style="background-color: #7CB4AE;">                                               
                               <div class="notebook-skin
                                    chip-active "
                                   >算法                                  
@@ -588,7 +588,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #AAFCF4;">                                               
+                                  style="background-color: #0A1599;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >java                                  
@@ -605,7 +605,7 @@
                       <div class="moleskine-notebook">
                           <div class="chip notebook-cover center-align waves-effect waves-light
                            chip-default "
-                                  style="background-color: #457FE7;">                                               
+                                  style="background-color: #2DB412;">                                               
                               <div class="notebook-skin
                                    chip-default "
                                   >java                                  
@@ -901,6 +901,56 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/posts/756a1399.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020120.jpg" class="responsive-img" alt="Leetcode 208. Implement Trie (Prefix Tree) 实现Trie（前缀树）">
+                            
+                            <span class="card-title">Leetcode 208. Implement Trie (Prefix Tree) 实现Trie（前缀树）</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                设计TrieNode节点，当insert时，则插入字典树所不存在的字符，并在插入完之后，将isWord置为true。当search时，从root节点，遍历字典树。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/leetcode/">
+                            <span class="chip bg-color">leetcode</span>
+                        </a>
+                        
+                        <a href="/tags/algorithm/">
+                            <span class="chip bg-color">algorithm</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/posts/af957438.html">
                         <div class="card-image tag-image">
                             
@@ -968,60 +1018,6 @@
                         <div class="summary block-with-text">
                             
                                 考虑动态规划的方法。因数值比较大，设置`long[] dp`，分析dp[i]和dp[i-1]与dp[i-2]之间的关系，设置条件，对相关数值累加
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/leetcode/">
-                            <span class="chip bg-color">leetcode</span>
-                        </a>
-                        
-                        <a href="/tags/algorithm/">
-                            <span class="chip bg-color">algorithm</span>
-                        </a>
-                        
-                        <a href="/tags/dp/">
-                            <span class="chip bg-color">dp</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/posts/b707e9b2.html">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928013627.jpg" class="responsive-img" alt="5. Longest Palindromic Substring 最长回文子串">
-                            
-                            <span class="card-title">5. Longest Palindromic Substring 最长回文子串</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                运用动态规划方法，动态规划方程为，当s.charAt(i)==s.charAt(j)时，这时`dp[i][j]=dp[i-1][j+1]`，当i-j<3时，这时`dp[i][j]=dp[i-1][j+1]`
                             
                         </div>
                         <div class="publish-info">
@@ -1161,7 +1157,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.4k</span>&nbsp;字
+                class="white-color">14k</span>&nbsp;字
             
             
             
