@@ -672,14 +672,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-23
+                    2021-09-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    473
+                    469
                 </div>
                 
 
@@ -710,7 +710,7 @@
 <p>The parts should be in the order of occurrence in the input list, and parts occurring earlier should always have a size greater than or equal to parts occurring later.</p>
 <p>Return <em>an array of the</em> <code>k</code> <em>parts</em>.</p>
 <p><strong>Example 1:</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/06/13/split1-lc.jpg" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cumark/picBed/20210928212303.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">Input: head = [1,2,3], k = 5
 Output: [[1],[2],[3],[],[]]
 Explanation:
@@ -718,7 +718,7 @@ The first element output[0] has output[0].val = 1, output[0].next = null.
 The last element output[4] is null, but its string representation as a ListNode is [].<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>Example 2:</strong></p>
-<p><img src="https://assets.leetcode.com/uploads/2021/06/13/split2-lc.jpg" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cumark/picBed/20210928212320.png"></p>
 <pre class="line-numbers language-none"><code class="language-none">Input: head = [1,2,3,4,5,6,7,8,9,10], k = 3
 Output: [[1,2,3,4],[5,6,7],[8,9,10]]
 Explanation:
@@ -732,7 +732,7 @@ The input has been split into consecutive parts with size difference at most 1, 
 <li><code>0 &lt;= Node.val &lt;= 1000</code></li>
 <li><code>1 &lt;= k &lt;= 50</code></li>
 </ul>
-<p>这道题要把一个ListNode链表，平均分隔为k段，有部分数量可能多一个，放到前面。对于一道 Medium 题而言，思路比较清晰，主要就是考察了一个对链表的使用和对细节的把握，可以使用两个for循环，把被分割的每一段链表的开端设为上一段的next，</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>这道题要把一个ListNode链表，平均分隔为k段，有部分数量可能多一个，放到前面。对于一道 Medium 题而言，思路比较清晰，主要就是考察了一个对链表的使用和对细节的把握，可以使用两个for循环，把被分割的每一段链表的开端设为上一段的next，</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">res<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>cur<span class="token punctuation">;</span>
 <span class="token keyword">int</span> part<span class="token operator">=</span>every<span class="token operator">+</span><span class="token punctuation">(</span>suff<span class="token operator">&gt;</span>i<span class="token operator">?</span><span class="token number">1</span><span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -741,9 +741,8 @@ The input has been split into consecutive parts with size difference at most 1, 
 cur<span class="token punctuation">.</span>next<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">;</span>
 cur<span class="token operator">=</span>next<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>然后比较这个距离和，跟总距离减去该距离所得结果之间的较小值返回即可，参见代码如下：</p>
-<p>解法：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<p>然后比较这个距离和，跟总距离减去该距离所得结果之间的较小值返回即可</p>
+<h4 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token class-name">ListNode</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">splitListToParts</span><span class="token punctuation">(</span><span class="token class-name">ListNode</span> head<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span> sum<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token class-name">ListNode</span> cur<span class="token operator">=</span>head<span class="token punctuation">;</span>

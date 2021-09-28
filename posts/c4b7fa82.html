@@ -672,7 +672,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-23
+                    2021-09-28
                 </div>
                 
 
@@ -731,8 +731,8 @@ Output: 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 <ul>
 <li><code>1 &lt;= n &lt;= 1000</code></li>
 </ul>
-<p>分析：这道题主要说，如果要从A获得AA，需要2个额外的步骤（全部复制然后粘贴），如果要从A获得AAA，我们需要三个额外的步骤，（全部复制，然后粘贴，再次粘贴）。为了生成 AAAA，我们需要 AA 的 2 个步骤。<br>但是，要获得 AAAAAAAA，最好的方法是从 AAAA 获得，有 2 个步骤（全部复制然后粘贴）<br>本质上，我们找到了下一个更短的序列，它可以被复制然后多次粘贴以生成所需的序列。当我们找到一个可以完美分割我们所需序列长度的长度时，我们就不需要检查任何更短的序列。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>看到字符串相关，最容易想到的便是动态规划，动态规划方程经验证可写为，dp[i]=dp[j]+i/j，其中dp[i]是目前得到记事本相应字符个数所需的最少操作次数，dp[j]为之前（最终匹配到的为i的约数）。如i=9，j=3，那么经此动态规划方程运算，则dp[i]会在dp[j]的基础上加3，相当于复制，粘贴，粘贴。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>这道题主要说，如果要从A获得AA，需要2个额外的步骤（全部复制然后粘贴），如果要从A获得AAA，我们需要三个额外的步骤，（全部复制，然后粘贴，再次粘贴）。为了生成 AAAA，我们需要 AA 的 2 个步骤。<br>但是，要获得 AAAAAAAA，最好的方法是从 AAAA 获得，有 2 个步骤（全部复制然后粘贴）<br>本质上，我们找到了下一个更短的序列，它可以被复制然后多次粘贴以生成所需的序列。当我们找到一个可以完美分割我们所需序列长度的长度时，我们就不需要检查任何更短的序列。</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>看到字符串相关，最容易想到的便是动态规划，动态规划方程经验证可写为，dp[i]=dp[j]+i/j，其中dp[i]是目前得到记事本相应字符个数所需的最少操作次数，dp[j]为之前（最终匹配到的为i的约数）。如i=9，j=3，那么经此动态规划方程运算，则dp[i]会在dp[j]的基础上加3，相当于复制，粘贴，粘贴。</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">minSteps</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dp<span class="token operator">=</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>

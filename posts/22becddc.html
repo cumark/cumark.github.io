@@ -676,7 +676,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-09-28
                 </div>
                 
 
@@ -723,9 +723,8 @@ Output: 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 <ul>
 <li><code>-1000 &lt;= a, b &lt;= 1000</code></li>
 </ul>
-<p>分析：</p>
-<p>题目的要求非常简单，在不使用+-号及其相关符号的原则下，实现两个整数相加，优先考虑位运算，可以把需要进位和不需要进位的部分迭代运算。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>根据以上分析，对于需要进位的部分，用(a&amp;b)&lt;&lt;1实现，对于不需要进位，则用a^b的实现，不断迭代，代码如下：</p>
+<h2 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h2><p>题目的要求非常简单，在不使用+-号及其相关符号的原则下，实现两个整数相加，优先考虑位运算，可以把需要进位和不需要进位的部分迭代运算。</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>根据以上分析，对于需要进位的部分，用(a&amp;b)&lt;&lt;1实现，对于不需要进位，则用a^b的实现，不断迭代，代码如下：</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getSum</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">while</span><span class="token punctuation">(</span>a<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1347,9 +1346,9 @@ new Valine({
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020832.jpg" class="responsive-img" alt="Leetcode 430. Flatten a Multilevel Doubly Linked List 扁平化多级双向链表">
+                        <img src="https://cdn.jsdelivr.net/gh/cumark/photo@master/posts/20200928020704.jpg" class="responsive-img" alt="Leetcode 583. Delete Operation for Two Strings 两个字符串的删除操作">
                         
-                        <span class="card-title">Leetcode 430. Flatten a Multilevel Doubly Linked List 扁平化多级双向链表</span>
+                        <span class="card-title">Leetcode 583. Delete Operation for Two Strings 两个字符串的删除操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
