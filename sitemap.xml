@@ -198,7 +198,7 @@
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/google1xxxxxxx0.html</loc>
+    <loc>http://www.liniuniu.top/friends/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
@@ -212,14 +212,14 @@
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/resource/index.html</loc>
+    <loc>http://www.liniuniu.top/google1xxxxxxx0.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/friends/index.html</loc>
+    <loc>http://www.liniuniu.top/resource/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
@@ -233,14 +233,14 @@
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/baidu_verify_xxxxxxx.html</loc>
+    <loc>http://www.liniuniu.top/census/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/census/index.html</loc>
+    <loc>http://www.liniuniu.top/baidu_verify_xxxxxxx.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
@@ -268,13 +268,6 @@
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/List/music/index.html</loc>
-    
-    <lastmod>2021-09-22</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.liniuniu.top/List/movies/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
@@ -289,7 +282,7 @@
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/List/index.html</loc>
+    <loc>http://www.liniuniu.top/List/music/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
@@ -303,14 +296,7 @@
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/List/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/index.html</loc>
-    
-    <lastmod>2021-09-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.liniuniu.top/List/galleries/%E5%91%86%E8%90%8C%E7%8C%AB%E5%92%AA/index.html</loc>
+    <loc>http://www.liniuniu.top/List/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
@@ -318,6 +304,13 @@
   
   <url>
     <loc>http://www.liniuniu.top/List/galleries/%E5%9F%8E%E5%B8%82%E9%A3%8E%E5%85%89/index.html</loc>
+    
+    <lastmod>2021-09-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.liniuniu.top/List/galleries/%E7%92%80%E7%92%A8%E6%98%9F%E7%A9%BA/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
@@ -338,7 +331,21 @@
   </url>
   
   <url>
+    <loc>http://www.liniuniu.top/List/galleries/%E5%91%86%E8%90%8C%E7%8C%AB%E5%92%AA/index.html</loc>
+    
+    <lastmod>2021-09-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.liniuniu.top/List/galleries/%E5%8A%A8%E6%BC%AB%E9%A3%8E%E6%99%AF/index.html</loc>
+    
+    <lastmod>2021-09-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.liniuniu.top/List/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
@@ -353,13 +360,6 @@
   
   <url>
     <loc>http://www.liniuniu.top/List/galleries/%E5%8A%A8%E6%BC%AB%E4%BA%BA%E7%89%A9/index.html</loc>
-    
-    <lastmod>2021-09-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.liniuniu.top/List/galleries/%E5%8A%A8%E6%BC%AB%E6%8F%92%E7%94%BB/index.html</loc>
     
     <lastmod>2021-09-22</lastmod>
     
@@ -403,13 +403,6 @@
 
   
   <url>
-    <loc>http://www.liniuniu.top/tags/Map/</loc>
-    <lastmod>2022-04-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.liniuniu.top/tags/Git/</loc>
     <lastmod>2022-04-17</lastmod>
     <changefreq>daily</changefreq>
@@ -438,14 +431,14 @@
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/tags/dfs/</loc>
+    <loc>http://www.liniuniu.top/tags/dp/</loc>
     <lastmod>2022-04-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/tags/dp/</loc>
+    <loc>http://www.liniuniu.top/tags/dfs/</loc>
     <lastmod>2022-04-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -487,6 +480,13 @@
   </url>
   
   <url>
+    <loc>http://www.liniuniu.top/tags/Map/</loc>
+    <lastmod>2022-04-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.liniuniu.top/tags/java/</loc>
     <lastmod>2022-04-17</lastmod>
     <changefreq>daily</changefreq>
@@ -510,14 +510,14 @@
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/java/</loc>
+    <loc>http://www.liniuniu.top/categories/%E7%AE%97%E6%B3%95/java/</loc>
     <lastmod>2022-04-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.liniuniu.top/categories/%E7%AE%97%E6%B3%95/java/</loc>
+    <loc>http://www.liniuniu.top/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/java/</loc>
     <lastmod>2022-04-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
